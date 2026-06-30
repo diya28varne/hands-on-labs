@@ -108,14 +108,15 @@ http://localhost:5173/?demo=wc2022-saudi-offside
 http://localhost:5173/?demo=ucl-2019-llorente-handball
 ```
 
-### Deploy on Vercel (no local servers)
+### Deploy on Vercel (same UI as localhost)
 
-**Live demo:** [refmind.vercel.app](https://refmind.vercel.app/?demo=wc2022-montiel-handball)
+Your local app at **http://localhost:5173/** is the correct RefMind design (dark pitch theme, vote flow, football incidents). Vercel must deploy **`refmind/` only** — same source, same build.
 
-Frontend + API deploy together. Demo mode is on by default — no `localhost` needed.
+1. [Import on Vercel](https://vercel.com/new/import?s=https://github.com/diya28varne/hands-on-labs&project-name=refmind-ibm&root-directory=refmind)
+2. Confirm **Root Directory = `refmind`** (not the repo root)
+3. Deploy → use **your** URL from the dashboard, e.g. `https://refmind-ibm.vercel.app/?demo=wc2022-montiel-handball`
 
-1. [Import on Vercel](https://vercel.com/new/import?s=https://github.com/diya28varne/hands-on-labs&project-name=refmind&root-directory=refmind) → set **Root Directory** to `refmind` if prompted
-2. Deploy → open `https://refmind.vercel.app/?demo=wc2022-montiel-handball`
+> Do **not** use `refmind.vercel.app` — that is someone else's unrelated app. Pick a new project name (e.g. `refmind-ibm`).
 
 **CLI** (if system `npm` is broken, use the bundled tooling):
 
