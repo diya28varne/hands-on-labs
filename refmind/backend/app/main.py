@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -36,6 +36,9 @@ def startup() -> None:
         seed_vectorstore()
 
 
+router = APIRouter()
+
+
 class VoteRequest(BaseModel):
     user_vote: bool = Field(..., description="True = yes/foul, False = no/no foul")
 
@@ -59,7 +62,7 @@ class AskRefRequest(BaseModel):
     )
 
 
-@app.get("/health")
+@router.get("/health")
 def health() -> dict:
     return {
         "status": "ok",
@@ -71,18 +74,18 @@ def health() -> dict:
     }
 
 
-@app.get("/health/granite")
+@router.get("/health/granite")
 def health_granite() -> dict:
     """Test live Granite connection (requires DEMO_MODE=false and valid credentials)."""
     return test_granite_connection()
 
 
-@app.get("/incidents")
+@router.get("/incidents")
 def get_incidents() -> list[dict]:
     return list_incidents()
 
 
-@app.get("/incidents/{incident_id}")
+@router.get("/incidents/{incident_id}")
 def get_incident_by_id(incident_id: str) -> dict:
     incident = get_incident(incident_id)
     if not incident:
@@ -99,7 +102,7 @@ def get_incident_by_id(incident_id: str) -> dict:
     }
 
 
-@app.post("/incidents/{incident_id}/vote")
+@router.post("/incidents/{incident_id}/vote")
 def submit_vote(incident_id: str, body: VoteRequest) -> dict:
     incident = get_incident(incident_id)
     if not incident:
@@ -107,7 +110,7 @@ def submit_vote(incident_id: str, body: VoteRequest) -> dict:
     return get_fan_result(incident, body.user_vote)
 
 
-@app.post("/incidents/{incident_id}/analyze")
+@router.post("/incidents/{incident_id}/analyze")
 def analyze(incident_id: str, body: AnalyzeRequest) -> dict:
     incident = get_incident(incident_id)
     if not incident:
@@ -132,7 +135,7 @@ def analyze(incident_id: str, body: AnalyzeRequest) -> dict:
     }
 
 
-@app.post("/incidents/{incident_id}/mind-change")
+@router.post("/incidents/{incident_id}/mind-change")
 def mind_change(incident_id: str, body: MindChangeRequest) -> dict:
     incident = get_incident(incident_id)
     if not incident:
@@ -143,7 +146,7 @@ def mind_change(incident_id: str, body: MindChangeRequest) -> dict:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
 
-@app.post("/ask-ref")
+@router.post("/ask-ref")
 def ask_the_ref(body: AskRefRequest) -> dict:
     incident = get_incident(body.incident_id)
     if not incident:
@@ -152,3 +155,9 @@ def ask_the_ref(body: AskRefRequest) -> dict:
         return ask_ref(body.incident_id, body.question, body.analysis_context)
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+
+# Local dev: vite proxy strips /api → routes at /
+# Vercel: requests arrive as /api/* → register both prefixes
+app.include_router(router)
+app.include_router(router, prefix="/api")
