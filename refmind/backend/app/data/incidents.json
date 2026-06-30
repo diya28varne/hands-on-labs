@@ -1,0 +1,176 @@
+[
+  {
+    "id": "wc2022-montiel-handball",
+    "title": "Montiel handball — World Cup Final 2022",
+    "match": "Argentina vs France, World Cup Final 2022",
+    "minute": 116,
+    "question": "Was this a handball by Montiel?",
+    "description": "Extra time. France cross the ball into the box. Nicolás Otamendi misses his header, the ball drops toward goal, and Nahuel Molina's clearance hits Gonzalo Montiel's outstretched arm. The referee points to the spot. Kylian Mbappé scores the penalty to make it 3-3.",
+    "video_hint": "Qatar 2022 final — 116th minute, France's equaliser from the spot",
+    "user_vote_prompt": "Handball? You have 5 seconds — vote now.",
+    "fan_yes_pct": 58,
+    "mind_change_pct": 51,
+    "rule_topic": "handball",
+    "rule_citation": "IFAB Law 12 — Handball",
+    "rule_keywords": ["handball", "deliberate", "unnatural position", "arm", "penalty", "Law 12"],
+    "referee_context": {
+      "referee_position": "12m inside the penalty area, level with the six-yard box",
+      "view_angle": "Front-on to Montiel; saw arm contact but not whether the arm moved toward the ball",
+      "decision_time_seconds": 2,
+      "pressure": "World Cup final, extra time, Argentina leading 3-2 — one call from a shootout"
+    },
+    "pressure_context": {
+      "crowd": "88,000 at Lusail Stadium",
+      "decision_time_seconds": 2,
+      "view_quality": "Front-on but chaotic — partially obstructed scramble",
+      "stakes": "World Cup final, extra time, 3-2 lead"
+    },
+    "emotion_rule": {
+      "emotion_label": "HAND BALL",
+      "rule_label": "BORDERLINE — Law 12"
+    },
+    "camera_context": {
+      "broadcast_angle": "Slow-motion replay from behind the goal, zoomed tight on the arm",
+      "camera_limit": "Replay makes the arm look further from the body than it appeared at full speed from the referee's angle",
+      "missing_context": "Whether Montiel's arm was already in a natural position when Molina's clearance deflected off it — the broadcast never showed the referee's exact sightline",
+      "what_ref_saw": "Ball struck an extended arm in the box during a chaotic scramble; immediate penalty signal"
+    },
+    "ground_truth_note": "IFAB Law 12 — not every arm contact is handball; the arm must be in an unnaturally extended position or move toward the ball. Borderline on both counts."
+  },
+  {
+    "id": "wc2010-suarez-handball",
+    "title": "Suárez on the line — Ghana 2010",
+    "match": "Uruguay vs Ghana, World Cup Quarter-Final 2010",
+    "minute": 120,
+    "question": "Was the red card and penalty the correct decision?",
+    "description": "Last seconds of extra time. Dominic Ador's header beats the keeper and is heading into an empty net. Luis Suárez punches the ball off the line with both hands. Sent off. Asamoah Gyan hits the bar from the penalty. Uruguay win on penalties.",
+    "video_hint": "Johannesburg 2010 — goal-line handball, missed penalty, shootout drama",
+    "user_vote_prompt": "Correct call? Vote yes or no.",
+    "fan_yes_pct": 81,
+    "mind_change_pct": 12,
+    "rule_topic": "handball denying goal",
+    "rule_citation": "IFAB Law 12 — Denying an Obvious Goal",
+    "rule_keywords": ["handball", "denying obvious goal", "red card", "penalty", "goal line", "Law 12"],
+    "referee_context": {
+      "referee_position": "8m from goal, unobstructed view of the goal line",
+      "view_angle": "Perfect sightline — saw the deliberate double-hand stop in real time",
+      "decision_time_seconds": 1,
+      "pressure": "Last action of extra time; Ghana one kick from becoming Africa's first semi-finalist"
+    },
+    "pressure_context": {
+      "crowd": "84,490 at Soccer City, Johannesburg",
+      "decision_time_seconds": 1,
+      "view_quality": "Clear goal-line view — rare perfect sightline",
+      "stakes": "Last seconds of extra time; continent's first semi-final at stake"
+    },
+    "camera_context": {
+      "broadcast_angle": "Multiple HD cameras including goal-line angle — one of the clearest replays in World Cup history",
+      "camera_limit": "Almost none for the foul itself — TV and referee saw the same deliberate act",
+      "missing_context": "The real debate is moral (gamesmanship vs cheating), not visual — cameras cannot show intent vs desperation",
+      "what_ref_saw": "Deliberate handball preventing a certain goal — mandatory red card and penalty"
+    },
+    "ground_truth_note": "IFAB Law 12 — handball denying an obvious goal-scoring opportunity: red card and penalty. The call is correct; the punishment debate is emotional, not legal."
+  },
+  {
+    "id": "euro2020-england-penalty",
+    "title": "Sterling penalty — England vs Denmark",
+    "match": "Denmark vs England, Euro 2020 Semi-Final",
+    "minute": 104,
+    "question": "Was this a penalty on Raheem Sterling?",
+    "description": "Extra time at Wembley. Raheem Sterling drives into the box. Joakim Maehle sticks out a leg. Sterling goes down. The referee pauses — then points to the spot. Harry Kane's penalty is saved but he scores the rebound.",
+    "video_hint": "Euro 2020 semi — extra time, Wembley, laser pointer on the keeper",
+    "user_vote_prompt": "Penalty? Vote now.",
+    "fan_yes_pct": 39,
+    "mind_change_pct": 44,
+    "rule_topic": "penalty foul",
+    "rule_citation": "IFAB Law 12 — Fouls and Misconduct",
+    "rule_keywords": ["penalty", "careless", "trip", "contact", "penalty area", "Law 12"],
+    "referee_context": {
+      "referee_position": "18m away, trailing the play at an angle from the left",
+      "view_angle": "Saw Sterling go down and Maehle's leg extend — could not clearly judge force or whether contact caused the fall",
+      "decision_time_seconds": 4,
+      "pressure": "Extra time semi-final at home; no VAR review of the foul decision itself"
+    },
+    "pressure_context": {
+      "crowd": "66,000 at Wembley — deafening home support",
+      "decision_time_seconds": 4,
+      "view_quality": "Trailing angle — force of contact unclear",
+      "stakes": "Euro semi-final extra time; laser pointer on keeper"
+    },
+    "camera_context": {
+      "broadcast_angle": "Slow-motion from behind the goal shows minimal knee-to-knee contact",
+      "camera_limit": "Replay magnifies contact that looked like a dive at full speed; reverse angle never shown live",
+      "missing_context": "A laser pointer was visible on the Danish keeper from the crowd — the referee and cameras were dealing with multiple distractions simultaneously",
+      "what_ref_saw": "Sterling past his man, leg contact, attacker on the ground in the box"
+    },
+    "ground_truth_note": "IFAB Law 12 — a penalty requires a careless, reckless, or excessively forceful challenge. Many referees would let this go; others call it on contact alone."
+  },
+  {
+    "id": "wc2022-saudi-offside",
+    "title": "Lautaro offside — Argentina vs Saudi Arabia",
+    "match": "Argentina vs Saudi Arabia, World Cup Group Stage 2022",
+    "minute": 48,
+    "question": "Was Lautaro Martínez offside before scoring?",
+    "description": "Argentina 1-0 up and dominating. Lautaro Martínez runs through and finishes past the keeper. Flag stays down. Then VAR intervenes — the goal is chalked off for offside by a margin so tight the stadium falls silent. It happens again minutes later.",
+    "video_hint": "Qatar 2022 — Argentina's shock loss begins with two VAR offside calls",
+    "user_vote_prompt": "Offside? Vote now.",
+    "fan_yes_pct": 54,
+    "mind_change_pct": 38,
+    "rule_topic": "offside",
+    "rule_citation": "IFAB Law 11 — Offside",
+    "rule_keywords": ["offside", "VAR", "semi-automated", "marginal", "Law 11"],
+    "referee_context": {
+      "referee_position": "40m from goal, following play — not in line with the defensive line",
+      "view_angle": "Could not judge marginal offside; deferred entirely to VAR",
+      "decision_time_seconds": 75,
+      "pressure": "Opening group game; Argentina expected to win easily — VAR delay kills momentum twice"
+    },
+    "pressure_context": {
+      "crowd": "88,966 at Lusail Stadium",
+      "decision_time_seconds": 75,
+      "view_quality": "VAR-only — marginal pixel lines invisible live",
+      "stakes": "Shock upset brewing; Argentina's campaign in balance"
+    },
+    "camera_context": {
+      "broadcast_angle": "Semi-automated offside lines drawn on broadcast replays — not available to anyone in the stadium live",
+      "camera_limit": "TV draws a pixel-thin line on a shoulder or armpit; fans cannot see this in real time from any seat or standard camera",
+      "missing_context": "Which body part was measured (shoulder vs foot) and the exact frame when the pass was played — both changed between broadcast angles",
+      "what_ref_saw": "Flag down initially; after VAR check, told to disallow for offside by the narrowest margin"
+    },
+    "ground_truth_note": "IFAB Law 11 — offside is judged on any part of the body except hands/arms. Semi-automated VAR makes calls possible that no human eye could make in real time."
+  },
+  {
+    "id": "ucl-2019-llorente-handball",
+    "title": "Llorente handball — Tottenham vs Ajax",
+    "match": "Ajax vs Tottenham, Champions League Semi-Final 2019 (2nd Leg)",
+    "minute": 95,
+    "question": "Did Llorente handball before Lucas Moura's winner?",
+    "description": "Ajax lead 3-2 on aggregate. A cross drops to Fernando Llorente. The ball hits his arm and drops to Lucas Moura, who volleys in the winner on the turn. Ajax players scream for handball. The referee allows the goal. Tottenham reach the final.",
+    "video_hint": "Amsterdam 2019 — stoppage time, Lucas Moura hat-trick, handball appeal ignored",
+    "user_vote_prompt": "Handball? Vote now.",
+    "fan_yes_pct": 63,
+    "mind_change_pct": 57,
+    "rule_topic": "handball",
+    "rule_citation": "IFAB Law 12 — Handball",
+    "rule_keywords": ["handball", "goal", "deliberate", "unnatural position", "arm", "Law 12"],
+    "referee_context": {
+      "referee_position": "25m away, side-on to Llorente as the cross arrived",
+      "view_angle": "Saw the ball come off Llorente's upper body but at speed could not distinguish arm from chest",
+      "decision_time_seconds": 1,
+      "pressure": "Stoppage time in a Champions League semi-final; no VAR in Europe that season"
+    },
+    "pressure_context": {
+      "crowd": "52,000 at Johan Cruyff Arena — Ajax fans silenced",
+      "decision_time_seconds": 1,
+      "view_quality": "Side-on — arm vs chest indistinguishable at speed",
+      "stakes": "Champions League semi stoppage time; no VAR to check"
+    },
+    "camera_context": {
+      "broadcast_angle": "Replay from behind the goal shows the ball clearly striking Llorente's arm before falling to Moura",
+      "camera_limit": "The referee had no replay — only fans at home saw the arm contact on the first replay cycle",
+      "missing_context": "Whether the arm was in a natural position when the cross arrived; the side-on live angle made chest and arm look identical",
+      "what_ref_saw": "Ball deflected off Llorente's upper body toward Moura — played on instantly with no hesitation"
+    },
+    "ground_truth_note": "IFAB Law 12 — if the ball touches the arm and creates a goal-scoring opportunity, it should be handball. Replays suggest the arm was involved; the referee had no technology to check."
+  }
+]

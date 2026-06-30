@@ -1,0 +1,2 @@
+# Drop official IFAB/FIFA rule PDFs here, then run:
+# python -m app.ingest.ingest_rules
