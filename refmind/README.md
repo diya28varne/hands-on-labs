@@ -108,33 +108,22 @@ http://localhost:5173/?demo=wc2022-saudi-offside
 http://localhost:5173/?demo=ucl-2019-llorente-handball
 ```
 
-### Deploy on Vercel (same UI as localhost)
+### Live demo (Vercel)
 
-**Vercel project settings (required once):**
+**https://hands-on-labs.vercel.app/?demo=wc2022-montiel-handball**
+
+Same UI as localhost — frontend + API on one domain. Demo mode is on by default.
+
+Other incidents: append `?demo=<id>` (see [Demo URLs](#demo-urls) below).
+
+### Deploy on Vercel
+
+Already deployed from `diya28varne/hands-on-labs` → project **hands-on-labs**. Pushes to `main` auto-redeploy.
 
 | Setting | Value |
 |---------|--------|
-| Root Directory | `refmind` **or** leave blank (repo root — both work) |
-| Framework Preset | Other |
-| Build Command | *(auto from `vercel.json`)* |
-| Output Directory | *(auto from `vercel.json`)* |
-
-1. [Import / redeploy](https://vercel.com/new/import?s=https://github.com/diya28varne/hands-on-labs&project-name=refmind-ibm&root-directory=refmind)
-2. Wait for green **Ready** on the latest `main` commit
-3. Open **https://refmind-ibm.vercel.app/?demo=wc2022-montiel-handball**
-
-If you see `DEPLOYMENT_NOT_FOUND`: **Deployments → Redeploy** after confirming Root Directory is `refmind` (or empty with repo-root `vercel.json`).
-
-> Do **not** use `refmind.vercel.app` — that is a different unrelated app.
-
-**CLI** (if system `npm` is broken, use the bundled tooling):
-
-```powershell
-cd refmind
-scripts\setup-vercel-cli.cmd
-.tools\node\node.exe .tools\node_modules\vercel\dist\vc.js login
-scripts\deploy-vercel.cmd
-```
+| Root Directory | `refmind` |
+| Live URL | **https://hands-on-labs.vercel.app** |
 
 Optional Vercel env vars: `WATSONX_API_KEY`, `WATSONX_PROJECT_ID`, `DEMO_MODE=false`
 
