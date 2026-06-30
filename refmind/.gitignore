@@ -11,3 +11,6 @@ frontend/dist/
 
 # Local tooling
 tmp/
+.tools/
+.vercel-cli/
+.vercel/

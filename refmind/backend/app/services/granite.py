@@ -2,17 +2,21 @@
 
 from __future__ import annotations
 
-from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_ibm import ChatWatsonx
+from typing import TYPE_CHECKING, Any
 
 from app.config import settings
 
-_llm: ChatWatsonx | None = None
+if TYPE_CHECKING:
+    from langchain_ibm import ChatWatsonx
+
+_llm: Any = None
 
 
-def get_granite_llm() -> ChatWatsonx:
+def get_granite_llm() -> "ChatWatsonx":
     global _llm
     if _llm is None:
+        from langchain_ibm import ChatWatsonx
+
         _llm = ChatWatsonx(
             model_id=settings.watsonx_model_id,
             url=settings.watsonx_url,
@@ -29,6 +33,8 @@ def get_granite_llm() -> ChatWatsonx:
 
 def test_granite_connection() -> dict:
     """Send a minimal prompt to verify watsonx credentials and model access."""
+    from langchain_core.messages import HumanMessage
+
     if not settings.watsonx_configured:
         return {
             "ok": False,
@@ -60,6 +66,8 @@ def test_granite_connection() -> dict:
 
 
 def invoke_granite(system: str, user: str) -> str:
+    from langchain_core.messages import HumanMessage, SystemMessage
+
     llm = get_granite_llm()
     response = llm.invoke([SystemMessage(content=system), HumanMessage(content=user)])
     return response.content if hasattr(response, "content") else str(response)

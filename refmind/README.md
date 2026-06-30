@@ -110,13 +110,21 @@ http://localhost:5173/?demo=ucl-2019-llorente-handball
 
 ### Deploy on Vercel (no local servers)
 
+**Live demo:** [refmind.vercel.app](https://refmind.vercel.app/?demo=wc2022-montiel-handball)
+
 Frontend + API deploy together. Demo mode is on by default — no `localhost` needed.
 
-1. [vercel.com/new](https://vercel.com/new) → Import **diya28varne/hands-on-labs**
-2. Set **Root Directory** to `refmind`
-3. Deploy → open `https://your-app.vercel.app/?demo=wc2022-montiel-handball`
+1. [Import on Vercel](https://vercel.com/new/import?s=https://github.com/diya28varne/hands-on-labs&project-name=refmind&root-directory=refmind) → set **Root Directory** to `refmind` if prompted
+2. Deploy → open `https://refmind.vercel.app/?demo=wc2022-montiel-handball`
 
-CLI (from `refmind/`): `npx vercel --prod`
+**CLI** (if system `npm` is broken, use the bundled tooling):
+
+```powershell
+cd refmind
+scripts\setup-vercel-cli.cmd
+.tools\node\node.exe .tools\node_modules\vercel\dist\vc.js login
+scripts\deploy-vercel.cmd
+```
 
 Optional Vercel env vars: `WATSONX_API_KEY`, `WATSONX_PROJECT_ID`, `DEMO_MODE=false`
 
